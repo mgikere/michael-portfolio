@@ -2,7 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-# SPA (React/Vite) routing so refresh doesn't 404
 [[redirects]]
   from = "/*"
   to = "/index.html"
