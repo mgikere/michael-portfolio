@@ -1,9 +1,21 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <title>Content Manager</title>
-    <script src="https://unpkg.com/netlify-cms-app@^2.0.0/dist/netlify-cms.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+
+    <!-- Example buttons (for testing login/logout) -->
+    <button onclick="netlifyIdentity.open()">Login / Signup</button>
+    <button onclick="netlifyIdentity.logout()">Logout</button>
+
+    <!-- Your Vite app -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
