@@ -1,0 +1,24 @@
+backend:
+  name: github
+  repo: gikere/michael-portfolio
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: "https://your-site.netlify.app"  # update or remove if you like
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"   # filename pattern
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "author", label: "Author", widget: "string", default: "Michael Ndung'u" }
+      - { name: "cover", label: "Cover Image", widget: "image" }     # <-- cover field
+      - { name: "slug", label: "Slug", widget: "string" }           # <-- slug field
+      - { name: "categories", label: "Categories", widget: "list", default: ["General"] }
+      - { name: "body", label: "Body", widget: "markdown" }
