@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: gikerem/michael-portfolio
+  repo: gikere/michael-portfolio
   branch: main
 
 media_folder: "public/uploads"
