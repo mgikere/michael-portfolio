@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: gikerem/michael-portfolio   # your GitHub repo
+  repo: mgikere/michael-portfolio   # your GitHub repo
   branch: main                     # branch to commit to
 
 media_folder: "public/uploads"     # where uploaded images go in your repo
