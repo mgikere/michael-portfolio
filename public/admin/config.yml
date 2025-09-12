@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: gikerem/michael-portfolio   # 👈 make sure this matches your GitHub username/repo
+  branch: main
+
+media_folder: "public/uploads"   # where uploaded images are stored
+public_folder: "/uploads"        # how images are accessed in the site
+
+site_url: "https://gikere.netlify.app"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/posts"
+    create: true
+    slug: "{{slug}}"   # keeps the filename clean
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "author", label: "Author", widget: "string", default: "Michael Ndung'u" }
+      - { name: "slug", label: "Slug", widget: "string" }
+      - { name: "cover", label: "Cover Image", widget: "image" }
+      - { name: "cover_alt", label: "Cover Alt Text", widget: "string", default: "Blog cover image" }
+      - { name: "categories", label: "Categories", widget: "list", default: ["General"] }
+      - { name: "body", label: "Body", widget: "markdown" }
